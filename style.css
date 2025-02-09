@@ -1,0 +1,135 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #232526, #414345);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Centering To-Do List */
+.container {
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* White Box for To-Do List */
+#todo-box {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Input & Button */
+#newtask {
+    display: flex;
+    gap: 10px;
+}
+
+#newtask input {
+    flex: 1;
+    height: 45px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#newtask input:focus {
+    outline: none;
+    border-color: #ff7b00;
+}
+
+#newtask button {
+    width: 100px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: #ff7b00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Task List */
+#tasks {
+    margin-top: 20px;
+}
+
+.task {
+    background-color: #fff;
+    height: 50px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #d1d3d4;
+}
+
+.task span {
+    font-size: 16px;
+}
+
+.task button {
+    background-color: #ff4d4d;
+    color: white;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Floating Alien */
+.alien {
+    position: absolute;
+    font-size: 40px;
+    animation: floatAlien 10s infinite alternate ease-in-out;
+}
+
+/* Random Movement for Aliens */
+@keyframes floatAlien {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(50px, -50px);
+    }
+    50% {
+        transform: translate(-50px, 50px);
+    }
+    75% {
+        transform: translate(50px, 50px);
+    }
+    100% {
+        transform: translate(-50px, -50px);
+    }
+}
